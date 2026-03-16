@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Mail, Phone, Linkedin, Download, MapPin, ExternalLink, Award, Code, GraduationCap, Briefcase, Globe } from 'lucide-react';
+import { QRCodeCanvas } from 'qrcode.react';
 
 const Resume = () => {
   const handlePrint = () => {
@@ -50,6 +51,37 @@ const Resume = () => {
             </div>
           </div>
         </header>
+
+{/* CONTACT INFO - Fixed Line 53-55 */}
+<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-8 text-slate-300 border-t border-slate-800 pt-8">
+  <div className="flex items-center gap-3 min-w-0 group">
+    <Mail size={18} className="shrink-0 text-blue-400" />
+    <span className="truncate text-sm md:text-base">
+      tsigeselamawit925@gmail.com
+    </span>
+  </div>
+  
+  <div className="flex items-center gap-3 shrink-0">
+    <Phone size={18} className="shrink-0 text-blue-400" />
+    <span className="text-sm md:text-base">
+      +251 991 439 198
+    </span>
+  </div>
+
+  <a 
+    href="https://www.linkedin.com/in/selamawit-tsige-11067b28b" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 hover:text-white transition-colors min-w-0 group"
+  >
+    <Linkedin size={18} className="shrink-0 text-blue-400" />
+    <span className="truncate text-sm md:text-base">
+      LinkedIn Profile
+    </span>
+  </a>
+</div>
+
+
 
         <main className="p-10 md:p-14 grid grid-cols-1 lg:grid-cols-12 gap-12">
           
